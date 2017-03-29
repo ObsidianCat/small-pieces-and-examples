@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./form.css">
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    <script src="./form.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form -->
+
+    <form class="feedback" novalidate>
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name" class="valid-required valid-not-empty">
+          </div>
+
+          <div>
+            <label for="mail">E-mail:</label>
+            <input type="email" id="mail" name="user_email" class="valid-required valid-email">
+          </div>
+
+          <div>
+            <label for="msg">Message:</label>
+            <textarea
+            id="msg"
+            name="user_message"
+            data-lenght-min="25"
+            data-lenght-max="100"
+            class="valid-not-empty valid-not-empty valid-length-range"></textarea>
+          </div>
+        <fieldset>
+            <div>
+                <label for="cbox1">This is the first checkbox</label>
+                <input data-num-in-group="2" data-group="checbox-group-example" type="checkbox" id="cbox1" value="first_checkbox" class="valid-required valid-group">
+            </div>
+            <div>
+                <label for="cbox2">This is the second checkbox, which is checked</label>
+                <input data-num-in-group="2" data-group="checbox-group-example" type="checkbox" id="cbox2" value="second_checkbox" class="valid-group">
+            </div>
+            <div>
+                <label for="cbox3">This is the third checkbox, which is checked</label>
+                <input data-num-in-group="2" data-group="checbox-group-example" type="checkbox" id="cbox3" value="third_checkbox" class="valid-group">
+            </div>
+        </fieldset>
+          <div class="button">
+            <button class="submit" type="submit">Send your message</button>
+          </div>
+    </form>
+</body>
+</html>
